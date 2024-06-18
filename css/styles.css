@@ -7,12 +7,16 @@ body {
   letter-spacing: -0.02em;
 }
 
+body > .background-container {
+  background-color: #576f35;
+}
 .container {
   width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding: 0px 100px;
   border: 2px solid red;
+  position: relative;
 }
 
 .section {
@@ -125,17 +129,96 @@ body {
   max-width: 502px;
 }
 
-.background {
-  /* width: 650px;
-  height: 800px; */
-  background-color: #576f35;
+.header,
+.hero {
+  z-index: 1;
+  position: relative;
+}
 
+.background-container {
+  position: relative;
+  max-height: 800px;
+  /* max-width: 650px; */
+}
+
+.background-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
   background-image: linear-gradient(
       rgba(20, 20, 20, 0.2),
       rgba(20, 20, 20, 0.2)
     ),
     url("../images/hero/harvest-hero.jpg");
+  background-size: cover;
+  background-position: right center;
+  z-index: 0;
+}
 
-  background-position: 100% 0;
-  background-repeat: no-repeat;
+/* HOW IT WORKS */
+.works {
+  background-color: #576f35;
+}
+.works-container {
+  display: flex;
+  justify-content: center;
+}
+.image-container {
+  background-color: #7a3145;
+  width: 630px;
+  padding-right: 100px;
+  padding-left: 100px;
+  display: flex;
+  justify-content: start;
+}
+
+.text-container {
+  width: 630px;
+  padding: 100px;
+  padding-right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.how-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  margin-bottom: 25px;
+}
+
+.how-title span {
+  color: rgba(251, 251, 251, 0.3);
+}
+
+.wrap {
+  max-width: 450px;
+}
+
+.how-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.how-item {
+  display: flex;
+  border-radius: 15px;
+  padding: 12px 25px 12px 24px;
+  background-color: #fbfbfb;
+}
+
+.how-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: rgba(20, 20, 20, 0.6);
+  margin-bottom: 50px;
 }
