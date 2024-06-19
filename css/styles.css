@@ -275,7 +275,7 @@ body > .background-container {
 
 .vegetables-title {
   font-weight: 600;
-  font-size: 64px;
+  font-size: 62px;
   line-height: 1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -324,4 +324,101 @@ body > .background-container {
   text-transform: uppercase;
   color: #141414;
   margin-bottom: 10px;
+}
+
+/* reviews */
+
+.reviews-title {
+  font-weight: 600;
+  font-size: 62px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #141414;
+}
+.reviews-title span {
+  color: #576f35;
+}
+
+.reviews-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #141414;
+}
+
+.reviews-text-container {
+  max-width: 553px;
+  margin-bottom: 50px;
+}
+
+.reviews-list {
+  display: flex;
+  gap: 25px;
+}
+
+.reviews-item {
+  width: calc((100% - 50px) / 3);
+  border: 1px solid rgba(122, 49, 69, 0.3);
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.reviews-item-image {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews-item-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #141414;
+  margin-bottom: 8px;
+}
+
+.reviews-item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(20, 20, 20, 0.4);
+}
+
+/* order */
+.order {
+  background-color: #7a3145;
+}
+.order-text-container {
+  width: 751px;
+}
+.order-title {
+  font-weight: 600;
+  font-size: 62px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  margin-bottom: 25px;
+}
+
+.order-title span {
+  color: rgba(251, 251, 251, 0.3);
+}
+
+.order-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fbfbfb;
+}
+
+.footer {
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
