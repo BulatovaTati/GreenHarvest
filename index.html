@@ -12,7 +12,10 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/resets.css" />
     <link rel="stylesheet" href="./css/variables.css" />
@@ -67,10 +70,11 @@
     <section id="works" class="works">
       <div class="container works-container">
         <div class="image-container">
-          <!-- <img
+          <img
             src="./images/howitworks/cutting-apple.jpg"
             alt="girl is cutting an apple"
-          /> -->
+            width="430"
+          />
         </div>
         <div class="text-container">
           <div class="wrap">
@@ -109,9 +113,10 @@
     <!-- advert -->
     <section class="advert section">
       <div class="container">
+        <h2 class="visually-hidden">Discount</h2>
         <p class="advert-text">
-          <span> Discount up to 40%!</span> Taste the vitamins and keep your
-          health
+          <span> Discount up to 40%!</span>
+          Taste the vitamins and keep your health
         </p>
       </div>
     </section>
@@ -239,7 +244,7 @@
     </section>
     <!-- order -->
     <section class="order section">
-      <div class="container">
+      <div class="container order-main-container">
         <div class="order-text-container">
           <h2 class="order-title">
             Fresh <span>Harvest</span> Box has got you covered
@@ -250,29 +255,138 @@
             your box today and start enjoying the best that nature has to offer!
           </p>
         </div>
-        <div class="order-container">
-          <form action=""></form>
-          <div>
-            <img src="" alt="" />
-            <p></p>
-            <ul>
-              <li>
-                <a href=""></a>
+        <div class="wrap-order">
+          <div class="order-container">
+            <p class="order-form-title">
+              Ordering <span class="violet">from us</span> is quick and easy!
+              Fill out
+              <span class="green">the form</span>
+              below and we will contact you !
+            </p>
+            <form class="order-form">
+              <div class="order-form-container">
+                <label for="user-name" class="order-form-label"></label>
+                <input
+                  type="text"
+                  id="user-name"
+                  class="order-form-input"
+                  name="user-name"
+                  minlength="3"
+                  placeholder="Full Name"
+                  autofocus
+                  required
+                />
+              </div>
+              <div class="order-form-container">
+                <label for="user-email" class="order-form-label"></label>
+                <input
+                  class="order-form-input"
+                  id="user-email"
+                  type="email"
+                  name="user-email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="order-form-comments-container">
+                <label for="user-comment" class="order-form-label"></label>
+                <textarea
+                  class="order-form-comments"
+                  id="user-comment"
+                  name="user-comment"
+                  placeholder="Comment"
+                ></textarea>
+              </div>
+              <button class="order-form-btn" type="submit">Send</button>
+            </form>
+          </div>
+          <div class="social-container">
+            <img
+              class="social-img"
+              src="./images/order/fresh.jpg"
+              alt="fresh"
+              width="427"
+            />
+            <p class="social-text">Follow us on our social networks:</p>
+            <ul class="social-list">
+              <li class="social-item">
+                <a href="" class="social-link">instagram</a>
+                &#47;
               </li>
-              <li>
-                <a href=""></a>
+              <li class="social-item">
+                <a href="" class="social-link">facebook</a>
+                &#47;
               </li>
-              <li>
-                <a href=""></a>
+              <li class="social-item">
+                <a href="" class="social-link">youtube </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-
     <footer class="footer">
-      <div class="container"></div>
+      <div class="container footer-container">
+        <div class="footer-main-container">
+          <div class="logo-text-container">
+            <a
+              class="logo footer-logo"
+              href="./index.html"
+              aria-label="Логотип сайту CreenHarvest"
+            >
+              <svg class="logo" width="194" height="18">
+                <use href="./icons/sprite.svg#icon-logo"></use>
+              </svg>
+            </a>
+            <p class="footer-text">
+              Whether you're looking for a healthy snack or a thoughtful gift,
+              our fruit baskets are the perfect choice.
+            </p>
+          </div>
+          <div class="connection-container">
+            <ul class="footer-nav-list">
+              <li class="footer-nav-item">
+                <a href="#works" class="footer-nav-link">How It Works</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="#vegetables" class="footer-nav-link">Vegetables</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="#reviews" class="footer-nav-link">Reviews</a>
+              </li>
+            </ul>
+            <address class="address">
+              <ul class="address-list">
+                <li class="address-item">
+                  <a class="phone" href="tel:+380684439426"
+                    >+380 (68) 443-94-26</a
+                  >
+                </li>
+                <li class="address-item">
+                  <a
+                    class="address-link"
+                    href="https://www.google.com/maps/place/1678+Pioneer+Rd,+Salt+Lake+City,+UT+84104,+%D0%A1%D0%A8%D0%90/@40.7335892,-111.9626616,17z/data=!3m1!4b1!4m6!3m5!1s0x8752f35b0826d399:0x2b26230524fd3ca3!8m2!3d40.7335892!4d-111.9600867!16s%2Fg%2F11bw41vm_p?entry=ttu"
+                    target="_blank"
+                    >1678 S. Pioneer Road Salt Lake City UT 84104</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
+        <div class="footer-policy-container">
+          <ul class="policy-list">
+            <li class="policy-item">
+              <a href="" class="policy-link">Privacy Policy</a>
+            </li>
+            <li>&#47;</li>
+            <li class="policy-item">
+              <a href="" class="policy-link">Cookie settings</a>
+            </li>
+          </ul>
+          <p class="copyrights">&copy;Green Harvest 2023</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
