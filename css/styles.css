@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter Tight", sans-serif;
   color: var(--main-text);
@@ -5,10 +9,6 @@ body {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: -0.02em;
-}
-
-body > .background-container {
-  background-color: #576f35;
 }
 
 .visually-hidden {
@@ -45,6 +45,7 @@ body > .background-container {
   fill: #fbfbfb;
   transition: fill 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 .logo:hover,
 .logo:focus {
   fill: #7a3145;
@@ -58,9 +59,11 @@ body > .background-container {
   display: flex;
   align-items: center;
 }
+
 .navigation {
   margin-right: 20px;
 }
+
 .navigation-list {
   display: flex;
   gap: 32px;
@@ -118,8 +121,7 @@ body > .background-container {
 
 .header,
 .hero {
-  z-index: 1;
-  position: relative;
+  background-color: #576f35;
 }
 
 .hero-title {
@@ -146,10 +148,9 @@ body > .background-container {
   padding-top: 117px;
 }
 
-.background-container {
-  position: relative;
+/* .background-container {
+  width: 650px;
   max-height: 800px;
-  /* max-width: 650px; */
 }
 
 .background-container::before {
@@ -166,13 +167,13 @@ body > .background-container {
     url("../images/hero/harvest-hero.jpg");
   background-size: cover;
   background-position: right center;
-  z-index: 0;
-}
+} */
 
 /* HOW IT WORKS */
 .works {
   background-color: #576f35;
 }
+
 .works-container {
   display: flex;
   justify-content: center;
@@ -445,7 +446,13 @@ body > .background-container {
   line-height: 1;
   letter-spacing: -0.01em;
   color: #fbfbfb;
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.social-link:hover,
+.social-link:focus {
+  color: #7a3145;
+}
+
 .order-title {
   font-weight: 600;
   font-size: 62px;
@@ -504,6 +511,8 @@ body > .background-container {
   border-radius: 30px;
   padding: 16px;
   width: 100%;
+  display: block;
+  transition: outline 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .order-form-input::placeholder,
@@ -512,9 +521,21 @@ body > .background-container {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: -0.02em;
-
   color: #141414;
 }
+
+.order-form-input:focus-within,
+.order-form-input:focus,
+.order-form-input:hover {
+  outline: 1px solid #3cbc81;
+}
+
+.order-form-comments:focus-within,
+.order-form-comments:focus,
+.order-form-comments:hover {
+  outline: 1px solid #3cbc81;
+}
+
 .order-form-comments {
   resize: none;
   height: 95px;
@@ -534,8 +555,14 @@ body > .background-container {
   height: 52px;
   background-color: #576f35;
   cursor: pointer;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.order-form-btn:hover,
+.order-form-btn:focus {
+  background-color: #7a3145;
+}
 .footer {
   padding-bottom: 50px;
   padding-top: 50px;
@@ -546,6 +573,14 @@ body > .background-container {
 }
 .footer-logo {
   margin-bottom: 25px;
+}
+.footer-svg {
+  transition: fill 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footer-svg:hover,
+.footer-svg:focus {
+  fill: #576f35;
 }
 
 .footer-text {
@@ -567,6 +602,12 @@ body > .background-container {
   letter-spacing: -0.01em;
   color: #fbfbfb;
   text-transform: lowercase;
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+  color: #576f35;
 }
 
 .address-list {
@@ -583,6 +624,15 @@ body > .background-container {
   line-height: 1.11111;
   letter-spacing: -0.01em;
   color: #fbfbfb;
+  font-style: normal;
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.address-link:hover,
+.address-link:focus,
+.phone:hover,
+.phone:focus {
+  color: #576f35;
 }
 
 .connection-container {
@@ -598,6 +648,7 @@ body > .background-container {
 .logo-text-container {
   margin-right: auto;
 }
+
 .policy-list {
   display: flex;
   gap: 8px;
@@ -609,6 +660,12 @@ body > .background-container {
   line-height: 1.11111;
   letter-spacing: -0.01em;
   color: rgba(251, 251, 251, 0.5);
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.policy-link:hover,
+.policy-link:focus {
+  color: #576f35;
 }
 
 .footer-main-container {
