@@ -41,7 +41,12 @@
           aria-controls="menu-container"
           data-menu-button
         >
-          <svg width="32" height="32" aria-label="Mobile menu toggle">
+          <svg
+            class="menu-icons"
+            width="32"
+            height="32"
+            aria-label="Mobile menu toggle"
+          >
             <use
               class="icon-menu"
               href="./icons/icons.svg#icon-mobile-menu"
@@ -52,23 +57,25 @@
             ></use>
           </svg>
         </button>
-        <div class="menu" id="menu-container" data-menu>
-          <nav class="navigation">
-            <ul class="navigation-list">
-              <li class="navigation-item">
-                <a href="#works" class="navigation-link current"
-                  >How It Works</a
-                >
-              </li>
-              <li class="navigation-item">
-                <a href="#vegetables" class="navigation-link">Vegetables</a>
-              </li>
-              <li class="navigation-item">
-                <a href="#reviews" class="navigation-link">Reviews</a>
-              </li>
-            </ul>
-          </nav>
-          <button type="button" class="btn">Shop now</button>
+        <div class="menu-backdrop" data-menu>
+          <div class="menu" id="menu-container">
+            <nav class="navigation">
+              <ul class="navigation-list">
+                <li class="navigation-item">
+                  <a href="#works" class="navigation-link current"
+                    >How It Works</a
+                  >
+                </li>
+                <li class="navigation-item">
+                  <a href="#vegetables" class="navigation-link">Vegetables</a>
+                </li>
+                <li class="navigation-item">
+                  <a href="#reviews" class="navigation-link">Reviews</a>
+                </li>
+              </ul>
+            </nav>
+            <button type="button" class="btn">Shop now</button>
+          </div>
         </div>
       </div>
     </header>
