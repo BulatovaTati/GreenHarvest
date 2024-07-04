@@ -3,13 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CreenHarvest</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -17,12 +10,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>CreenHarvest</title>
     <link rel="stylesheet" href="./css/resets.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="background-container"></div>
     <!-- header -->
     <header class="header">
       <div class="container header-container">
@@ -31,29 +30,50 @@
           href="./index.html"
           aria-label="Логотип сайту CreenHarvest"
         >
-          <svg class="logo" width="194" height="18">
-            <use href="./icons/sprite.svg#icon-logo"></use>
+          <svg width="194" height="18">
+            <use href="./icons/icons.svg#icon-logo"></use>
           </svg>
         </a>
-        <nav class="navigation">
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a href="#works" class="navigation-link">How It Works</a>
-            </li>
-            <li class="navigation-item">
-              <a href="#vegetables" class="navigation-link">Vegetables</a>
-            </li>
-            <li class="navigation-item">
-              <a href="#reviews" class="navigation-link">Reviews</a>
-            </li>
-          </ul>
-        </nav>
-        <button type="button" class="btn">Shop now</button>
+        <button
+          type="button"
+          class="menu-icon-btn"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="32" height="32" aria-label="Mobile menu toggle">
+            <use
+              class="icon-menu"
+              href="./icons/icons.svg#icon-mobile-menu"
+            ></use>
+            <use
+              class="icon-close"
+              href="./icons/icons.svg#icon-mobile-close"
+            ></use>
+          </svg>
+        </button>
+        <div class="menu" id="menu-container" data-menu>
+          <nav class="navigation">
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a href="#works" class="navigation-link current"
+                  >How It Works</a
+                >
+              </li>
+              <li class="navigation-item">
+                <a href="#vegetables" class="navigation-link">Vegetables</a>
+              </li>
+              <li class="navigation-item">
+                <a href="#reviews" class="navigation-link">Reviews</a>
+              </li>
+            </ul>
+          </nav>
+          <button type="button" class="btn">Shop now</button>
+        </div>
       </div>
     </header>
-    <main>
-      <!-- hero -->
-      <section class="hero">
+    <!-- <main> -->
+    <!-- <section class="hero">
         <div class="container">
           <div class="hero-container">
             <h1 class="hero-title">organic vegetables to your diet today!</h1>
@@ -65,8 +85,8 @@
             </p>
           </div>
         </div>
+        <div class="background-container"></div>
       </section>
-      <!-- works -->
       <section id="works" class="works">
         <div class="container works-container">
           <div class="image-container">
@@ -110,7 +130,6 @@
           </div>
         </div>
       </section>
-      <!-- advert -->
       <section class="advert section">
         <div class="container">
           <h2 class="visually-hidden">Discount</h2>
@@ -120,7 +139,6 @@
           </p>
         </div>
       </section>
-      <!-- vegetables -->
       <section id="vegetables" class="vegetables section">
         <div class="container">
           <div class="vegetables-title-container">
@@ -189,7 +207,6 @@
           </ul>
         </div>
       </section>
-      <!-- reviews -->
       <section id="reviews" class="reviews section">
         <div class="container">
           <div class="reviews-text-container">
@@ -244,7 +261,6 @@
           </ul>
         </div>
       </section>
-      <!-- order -->
       <section class="order section">
         <div class="container order-main-container">
           <div class="order-text-container">
@@ -390,6 +406,7 @@
           <p class="copyrights">&copy;Green Harvest 2023</p>
         </div>
       </div>
-    </footer>
+    </footer> -->
+    <script src="./js/menu.js"></script>
   </body>
 </html>
