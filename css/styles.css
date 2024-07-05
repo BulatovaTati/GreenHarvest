@@ -122,13 +122,14 @@ body {
 
 @media screen and (max-width: 1279px) {
   .menu {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 240px 130px 40px 130px;
+    padding: 240px 30px 40px 30px;
     background-color: #7a3145;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 
@@ -138,7 +139,7 @@ body {
     top: 0;
     right: 0;
     width: 351px;
-    padding: 240px 94px 50px 100px;
+    padding: 240px 30px 50px 30px;
   }
 
   .menu-icons {
@@ -155,56 +156,61 @@ body {
   }
 }
 
-.menu-icon-btn {
-  background-color: transparent;
-  z-index: 2;
-  cursor: pointer;
-  outline: none;
+.menu-open-btn {
+  width: 32px;
+  height: 32px;
+  position: relative;
   border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-close-btn {
+    right: 20px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-  .menu-icon-btn {
+  .menu-open-btn,
+  .menu-close-btn {
     display: none;
   }
 }
 
-.icon-close {
-  opacity: 0;
-  transform: translateX(-100%);
-
-  transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+.menu-icons {
+  stroke: #fbfbfb;
 }
 
-.icon-menu {
-  transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.menu-icon-btn.is-open .icon-menu {
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-.menu-icon-btn.is-open .icon-close {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.menu-icon-btn.is-open ~ .menu-backdrop {
+.menu-backdrop.is-open {
   transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
   overflow-y: scroll;
 }
-
-/* .menu-icon-btn.is-open > .menu-icons {
-  position: absolute;
-  top: 32px;
-  right: 32px;
-} */
 
 .menu.is-menu-shown body {
   overflow: hidden;
@@ -259,6 +265,7 @@ body {
   background-color: #fbfbfb;
   border: 1px solid rgba(251, 251, 251, 0.4);
 }
+
 @media screen and (max-width: 1279px) {
   .current {
     color: #7a3145;
@@ -302,6 +309,8 @@ body {
 @media screen and (min-width: 768px) {
   .btn {
     width: 157px;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 18px;
     line-height: 1.11;
     letter-spacing: -0.01em;

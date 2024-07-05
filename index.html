@@ -36,8 +36,9 @@
         </a>
         <button
           type="button"
-          class="menu-icon-btn"
+          class="menu-open-btn js-open-menu"
           aria-expanded="false"
+          aria-label="Menu open button"
           aria-controls="menu-container"
           data-menu-button
         >
@@ -49,16 +50,31 @@
           >
             <use
               class="icon-menu"
-              href="./icons/icons.svg#icon-mobile-menu"
-            ></use>
-            <use
-              class="icon-close"
               href="./icons/icons.svg#icon-mobile-close"
             ></use>
           </svg>
         </button>
-        <div class="menu-backdrop" data-menu>
+        <div class="menu-backdrop js-menu-container">
           <div class="menu" id="menu-container">
+            <button
+              type="button"
+              class="menu-close-btn js-close-menu"
+              id="menu-close-btn"
+              aria-expanded="false"
+              aria-label="Menu close button"
+            >
+              <svg
+                class="menu-icons"
+                width="32"
+                height="32"
+                aria-label="Mobile menu toggle"
+              >
+                <use
+                  class="icon-close"
+                  href="./icons/icons.svg#icon-mobile-menu"
+                ></use>
+              </svg>
+            </button>
             <nav class="navigation">
               <ul class="navigation-list">
                 <li class="navigation-item">
