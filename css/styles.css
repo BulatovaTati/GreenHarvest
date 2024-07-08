@@ -523,23 +523,51 @@ body {
 }
 
 /* advert */
-
 .advert-text {
   font-weight: 600;
-  font-size: 74px;
-  line-height: 1.05263;
+  font-size: 48px;
+  line-height: 1.04167;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   color: #141414;
 }
 
+@media screen and (min-width: 768px) {
+  .advert-text {
+    font-size: 64px;
+    line-height: 1.09375;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advert-text {
+    font-size: 74px;
+    line-height: 1.05263;
+    max-width: 1032px;
+  }
+}
+
 .advert-text span {
   display: inline-block;
+  padding: 3px 10px;
   color: #fbfbfb;
   background-color: #576f35;
   border-radius: 12px;
 }
 
+@media screen and (min-width: 768px) {
+  .advert-text span {
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advert-text span {
+    padding: 3px 10px;
+  }
+}
+
+/* vegetables */
 .vegetables {
   background-color: #7a3145;
 }
