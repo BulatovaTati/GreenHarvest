@@ -806,63 +806,50 @@ body {
   background-color: #7a3145;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .order-main-container {
+    padding: 0;
+  }
+}
+
 .order-text-container {
-  width: 751px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-.wrap-order {
-  display: flex;
-  gap: 24px;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .order-text-container {
+    padding: 0 32px;
+  }
 }
 
-.social-container {
-  background-color: #576f35;
-  border-radius: 30px;
-  padding: 50px;
+@media screen and (min-width: 768px) {
+  .order-text-container {
+    margin-bottom: 50px;
+  }
 }
 
-.social-img {
-  border-radius: 15px;
-  margin-bottom: 50px;
-}
-.social-text {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.11111;
-  letter-spacing: -0.01em;
-  color: rgba(251, 251, 251, 0.5);
-}
-
-.social-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.social-item {
-  font-size: 32px;
-}
-.social-link {
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.01em;
-  color: #fbfbfb;
-  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.social-link:hover,
-.social-link:focus {
-  color: #7a3145;
+@media screen and (min-width: 1280px) {
+  .order-text-container {
+    width: 751px;
+  }
 }
 
 .order-title {
+  margin-bottom: 29px;
   font-weight: 600;
-  font-size: 64px;
-  line-height: 1;
+  font-size: 48px;
+  line-height: 1.04167;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   color: #fbfbfb;
-  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .order-title {
+    margin-bottom: 25px;
+    font-size: 64px;
+    line-height: 1;
+  }
 }
 
 .order-title span {
@@ -871,17 +858,59 @@ body {
 
 .order-text {
   font-weight: 500;
-  font-size: 16px;
-
+  font-size: 14px;
+  line-height: 1.28571;
   color: #fbfbfb;
 }
 
+@media screen and (min-width: 768px) {
+  .order-text {
+    font-size: 16px;
+    line-height: 1.25;
+    max-width: 612px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .order-text {
+    max-width: 742px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrap-order {
+    padding: 0 70px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wrap-order {
+    padding: 0;
+    display: flex;
+    gap: 24px;
+  }
+}
+
 .order-container {
+  padding: 40px 20px;
+  margin-bottom: 20px;
   border-radius: 30px;
-  padding: 50px;
-  max-width: 529px;
-  height: 534px;
   background-color: #fbfbfb;
+}
+
+@media screen and (min-width: 768px) {
+  .order-container {
+    padding: 50px 100px;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .order-container {
+    padding: 50px;
+    margin-bottom: 0;
+    max-width: 529px;
+    height: 534px;
+  }
 }
 
 .order-form-title {
@@ -893,6 +922,7 @@ body {
   color: #141414;
   margin-bottom: 50px;
 }
+
 .order-form-title .violet {
   color: #7a3145;
 }
@@ -904,9 +934,11 @@ body {
 .order-form-container {
   margin-bottom: 15px;
 }
+
 .order-form-comments-container {
   margin-bottom: 25px;
 }
+
 .order-form-input,
 .order-form-comments {
   border: 1px solid rgba(20, 20, 20, 0.2);
@@ -921,7 +953,6 @@ body {
 .order-form-comments::placeholder {
   font-weight: 500;
   font-size: 16px;
-
   color: #141414;
 }
 
@@ -964,6 +995,83 @@ body {
 .order-form-btn:focus {
   background-color: #7a3145;
 }
+
+.social-container {
+  padding: 40px 20px;
+  background-color: #576f35;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .social-container {
+    padding: 50px;
+  }
+}
+
+.social-picture {
+  position: relative;
+  overflow: hidden;
+}
+
+.social-picture::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1414144d;
+  border-radius: 15px;
+}
+
+.social-img {
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.social-text {
+  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.11111;
+  letter-spacing: -0.01em;
+  color: rgba(251, 251, 251, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .social-text {
+    margin-bottom: 15px;
+  }
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-link {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.08333;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .social-link {
+    font-size: 32px;
+    line-height: 1;
+  }
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: #7a3145;
+}
+
+/* foooter */
 .footer {
   padding-bottom: 50px;
   padding-top: 50px;
