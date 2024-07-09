@@ -450,6 +450,9 @@
 }
 
 /* advert */
+.advert {
+  background-color: #fbfbfb;
+}
 .advert-text {
   font-weight: 600;
   font-size: 48px;
@@ -604,6 +607,9 @@
 }
 
 /* reviews */
+.reviews {
+  background: #fbfbfb;
+}
 
 .reviews-title {
   margin-bottom: 20px;
@@ -729,9 +735,6 @@
 }
 
 /* order */
-.order {
-  background-color: #7a3145;
-}
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .order-main-container {
@@ -1017,7 +1020,6 @@
 .footer {
   padding-bottom: 40px;
   padding-top: 40px;
-  background-color: #7a3145;
 }
 
 @media screen and (min-width: 768px) {
