@@ -453,6 +453,7 @@
 .advert {
   background-color: #fbfbfb;
 }
+
 .advert-text {
   font-weight: 600;
   font-size: 48px;
@@ -589,6 +590,7 @@
 }
 
 .vegetables-item-title {
+  margin-bottom: 12px;
   font-weight: 600;
   font-size: 32px;
   line-height: 1;
