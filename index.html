@@ -333,59 +333,62 @@
               of our services and the freshness of our products.
             </p>
           </div>
-          <ul class="reviews-list" data-aos="zoom-in" data-aos-delay="60">
-            <li class="reviews-item">
-              <img
-                srcset="
-                  ./images/reviews/image-John-1x.png 1x,
-                  ./images/reviews/image-John-2x.png 2x
-                "
-                src="./images/reviews/image-John-1x.png"
-                alt="John Wax"
-                class="reviews-item-image"
-              />
-              <h3 class="reviews-item-title">John Wax</h3>
-              <p class="reviews-item-text">
-                These vegetables are my secret to delicious and healthy meals.
-                The quality is always at the highest level, the aroma and taste
-                are enchanting. I advise every fan of real products!
-              </p>
-            </li>
-            <li class="reviews-item">
-              <img
-                srcset="
-                  ./images/reviews/image-Victoria-1x.png 1x,
-                  ./images/reviews/image-Victoria-2x.png 2x
-                "
-                src="./images/reviews/image-Victoria-1x.png"
-                alt="Victoria Romashenko"
-                class="reviews-item-image"
-              />
-              <h3 class="reviews-item-title">Victoria Romashenko</h3>
-              <p class="reviews-item-text">
-                I love how fast and fresh the vegetables are delivered. Salads
-                always turn out so appetizing, and soups are real masterpieces.
-                The quality is impeccable!
-              </p>
-            </li>
-            <li class="reviews-item">
-              <img
-                srcset="
-                  ./images/reviews/image-Ihor-1x.png 1x,
-                  ./images/reviews/image-Ihor-2x.png 2x
-                "
-                src="./images/reviews/image-Ihor-1x.png"
-                alt="Ihor Trachuk"
-                class="reviews-item-image"
-              />
-              <h3 class="reviews-item-title">Ihor Trachuk</h3>
-              <p class="reviews-item-text">
-                Recently tried my fresh tomatoes and peppers - amazing! The
-                authenticity of the taste, as if from the garden directly to my
-                table. It is now my main vegetable supplier.
-              </p>
-            </li>
-          </ul>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  srcset="
+                    ./images/reviews/image-John-1x.png 1x,
+                    ./images/reviews/image-John-2x.png 2x
+                  "
+                  src="./images/reviews/image-John-1x.png"
+                  alt="John Wax"
+                  class="reviews-item-image"
+                />
+                <h3 class="reviews-item-title">John Wax</h3>
+                <p class="reviews-item-text">
+                  These vegetables are my secret to delicious and healthy meals.
+                  The quality is always at the highest level, the aroma and
+                  taste are enchanting. I advise every fan of real products!
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  srcset="
+                    ./images/reviews/image-Victoria-1x.png 1x,
+                    ./images/reviews/image-Victoria-2x.png 2x
+                  "
+                  src="./images/reviews/image-Victoria-1x.png"
+                  alt="Victoria Romashenko"
+                  class="reviews-item-image"
+                />
+                <h3 class="reviews-item-title">Victoria Romashenko</h3>
+                <p class="reviews-item-text">
+                  I love how fast and fresh the vegetables are delivered. Salads
+                  always turn out so appetizing, and soups are real
+                  masterpieces. The quality is impeccable!
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  srcset="
+                    ./images/reviews/image-Ihor-1x.png 1x,
+                    ./images/reviews/image-Ihor-2x.png 2x
+                  "
+                  src="./images/reviews/image-Ihor-1x.png"
+                  alt="Ihor Trachuk"
+                  class="reviews-item-image"
+                />
+                <h3 class="reviews-item-title">Ihor Trachuk</h3>
+                <p class="reviews-item-text">
+                  Recently tried my fresh tomatoes and peppers - amazing! The
+                  authenticity of the taste, as if from the garden directly to
+                  my table. It is now my main vegetable supplier.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
       <section class="order section" id="order">
@@ -561,8 +564,11 @@
         </div>
       </div>
     </footer>
+    <button class="scroll-to-top js-transparent">UP</button>
     <script src="./js/menu.js"></script>
+    <script src="./js/to-top.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
