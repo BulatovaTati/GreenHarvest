@@ -56,3 +56,13 @@
     transform: scale(0.75);
   }
 }
+
+@keyframes slide-top {
+  from {
+    transform: translateY(-5px);
+  }
+
+  to {
+    transform: translateY(5px);
+  }
+}

@@ -70,3 +70,51 @@ body {
 .logo-icon {
   fill: #fbfbfb;
 }
+
+.swiper-slide {
+  cursor: pointer;
+}
+
+.swiper-pagination {
+  --swiper-theme-color: #7a3145;
+}
+
+.scroll-to-top {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .scroll-to-top {
+    display: block;
+    position: fixed;
+    bottom: 210px;
+    right: 8%;
+
+    width: 45px;
+    height: 45px;
+    color: #fbfbfb;
+    background-color: #7a3145;
+    outline: 2px solid #576f35;
+    border-radius: 150px 150px 0px;
+    border: none;
+
+    cursor: pointer;
+
+    transition: opacity 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+      color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+      outline 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation: slide-top 1s linear 2s infinite alternate both;
+  }
+}
+
+.scroll-to-top:hover,
+.scroll-to-top:focus {
+  outline: 2px solid #fbfbfb;
+}
+
+.js-transparent {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
