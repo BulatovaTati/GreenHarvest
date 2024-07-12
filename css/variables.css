@@ -1,6 +1,18 @@
 :root {
-  --text: #141414;
-  --background: #576f35;
-  --background-2: #7a3145;
+  --black-text: #141414;
   --main-text: #fbfbfb;
+  --accent-color-first: #7a3145;
+  --accent-color-second: #576f35;
+  --accent-alfa-color: rgba(251, 251, 251, 0.3);
+  --accent-alfa-input-color: rgba(251, 251, 251, 0.5);
+
+  --background-color-first: #7a3145;
+  --background-color-second: #576f35;
+  --background-color-third: #fbfbfb;
+  --gradient: linear-gradient(rgba(20, 20, 20, 0.2), rgba(20, 20, 20, 0.2));
+  --gradient-second: linear-gradient(#7a3145, #7a3145);
+
+  --time: 250ms;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --border-link: 1px solid rgba(251, 251, 251, 0.4);
 }

@@ -1,6 +1,6 @@
 .header {
   padding-top: 20px;
-  background-color: #576f35;
+  background-color: var(--background-color-second);
 }
 
 @media screen and (min-width: 1280px) {
@@ -34,7 +34,7 @@
 }
 
 .navigation-item {
-  color: #fbfbfb;
+  color: var(--main-text);
   text-transform: capitalize;
 }
 
@@ -42,17 +42,15 @@
   display: block;
   padding: 12px;
 
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.28;
 
   color: currentColor;
   border-radius: 12px;
-  border: 1px solid rgba(251, 251, 251, 0.4);
+  border: var(--border-link);
 
-  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
-    background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
-    border 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: color var(--time) var(--cubic),
+    background-color var(--time) var(--cubic);
 }
 
 @media screen and (min-width: 768px) {
@@ -63,16 +61,15 @@
 
 .navigation-link:hover,
 .navigation-link:focus {
-  color: #7a3145;
-  background-color: #fbfbfb;
-  border: 1px solid rgba(251, 251, 251, 0.4);
+  color: var(--accent-color-first);
+  background-color: var(--background-color-third);
 }
 
 @media screen and (max-width: 1279px) {
   .current {
-    color: #7a3145;
-    background-color: #fbfbfb;
-    border: 1px solid rgba(251, 251, 251, 0.4);
+    color: var(--accent-color-first);
+    background-color: var(--background-color-third);
+    border: var(--border-link);
   }
 }
 
@@ -90,21 +87,21 @@
   text-transform: uppercase;
   text-align: center;
 
-  color: #7a3145;
-  background-color: #fbfbfb;
+  color: var(--accent-color-first);
+  background-color: var(--background-color-third);
   border-radius: 30px;
   border: none;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
-    color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
-    outline 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  transition: background-color var(--time) var(--cubic),
+    color var(--time) var(--cubic), outline var(--time) var(--cubic);
   animation: swing 6s ease-in-out infinite forwards;
 }
 
 .btn:hover,
 .btn:focus {
   background-color: transparent;
-  color: #fbfbfb;
+  color: var(--main-text);
   outline: 1px solid rgba(251, 251, 251, 0.4);
 }
 
@@ -123,19 +120,19 @@
   .btn {
     margin-right: 0;
     margin-left: 0;
-    color: #fbfbfb;
-    background-color: #7a3145;
+    color: var(--main-text);
+    background-color: var(--background-color-first);
   }
 
   .btn:hover,
   .btn:focus {
-    background-color: #fbfbfb;
-    color: #7a3145;
+    background-color: var(--background-color-third);
+    color: var(--accent-color-first);
   }
 }
 
 .hero {
-  background-color: #576f35;
+  background-color: var(--background-color-second);
 }
 
 .hero-container {
@@ -144,12 +141,14 @@
 
 .hero-title {
   margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 48px;
   line-height: 1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #fbfbfb;
+
+  color: var(--main-text);
 }
 
 @media screen and (min-width: 768px) {
@@ -167,12 +166,12 @@
 }
 
 .hero-description {
-  font-weight: 500;
+  max-width: 316px;
+
   font-size: 14px;
   line-height: 1.29;
   text-align: left;
-  color: #fbfbfb;
-  max-width: 316px;
+  color: var(--main-text);
 }
 
 @media screen and (min-width: 768px) {
@@ -240,11 +239,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(20, 20, 20, 0.2), rgba(20, 20, 20, 0.2));
+  background: var(--gradient);
 }
 
 .works {
-  background-color: #576f35;
+  background-color: var(--background-color-second);
 }
 
 .works-container {
@@ -263,7 +262,7 @@
 .violet-container {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-image: linear-gradient(#7a3145, #7a3145);
+  background-image: var(--gradient-second);
 }
 
 @media screen and (min-width: 768px) {
@@ -324,8 +323,7 @@
 @media screen and (min-width: 768px) {
   .text-container {
     max-width: 450px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
 }
 
@@ -342,11 +340,11 @@
   line-height: 1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #fbfbfb;
+  color: var(--main-text);
 }
 
 .how-title span {
-  color: rgba(251, 251, 251, 0.3);
+  color: var(--accent-alfa-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -361,14 +359,14 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
-  color: #fbfbfb;
+  color: var(--main-text);
 }
 
 @media screen and (min-width: 768px) {
   .how-desc {
     margin-bottom: 50px;
     font-size: 16px;
-    color: #fbfbfb;
+    color: var(--main-text);
   }
 }
 
@@ -386,7 +384,7 @@
   gap: 14px;
   padding: 12px 13px;
   margin-bottom: 20px;
-  background: #fbfbfb;
+  background-color: var(--background-color-third);
   border-radius: 15px;
   counter-increment: number;
 }
@@ -415,8 +413,9 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 1;
-  color: #fbfbfb;
-  background-color: #7a3145;
+
+  color: var(--main-text);
+  background-color: var(--background-color-first);
   border-radius: 50%;
   border: 5px solid #d3bec4;
   animation: heartbeat 5s infinite;
@@ -444,78 +443,60 @@
 
 .how-text span {
   font-weight: 700;
-  color: #141414;
+  color: var(--black-text);
 }
 
 .advert {
-  background-color: #fbfbfb;
+  background-color: var(--background-color-third);
 }
 
 .advert-text {
   font-weight: 600;
   font-size: 48px;
-  line-height: 1.04167;
+  line-height: 1.04;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #141414;
+  color: var(--black-text);
 }
 
 @media screen and (min-width: 768px) {
   .advert-text {
     font-size: 64px;
-    line-height: 1.09375;
+    line-height: 1.09;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .advert-text {
     font-size: 74px;
-    line-height: 1.05263;
+    line-height: 1.05;
     max-width: 1032px;
   }
 }
 
 .advert-sale {
   display: inline-block;
-  padding: 3px 10px;
-  color: #fbfbfb;
-  background-color: #576f35;
-  border-radius: 12px;
-
+  color: transparent;
   background: 50% 100% / 50% 50% no-repeat
     radial-gradient(ellipse at bottom, #576f35, transparent, transparent);
   background-clip: text;
-  color: transparent;
 
   animation: reveal 3000ms ease-in-out forwards 200ms,
     glow 3500ms linear infinite 4000ms;
 }
 
-@media screen and (min-width: 768px) {
-  .advert-sale {
-    padding: 8px 16px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .advert-sale {
-    padding: 3px 10px;
-  }
-}
-
-/* vegetables */
 .vegetables {
-  background-color: #7a3145;
+  background-color: var(--background-color-first);
 }
 
 .vegetables-title {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 48px;
-  line-height: 1.04167;
+  line-height: 1.04;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #fbfbfb;
+  color: var(--main-text);
 }
 
 @media screen and (min-width: 768px) {
@@ -535,21 +516,20 @@
 }
 
 .vegetables-title span {
-  color: rgba(251, 251, 251, 0.3);
+  color: var(--accent-alfa-color);
 }
 
 .vegetables-text {
   margin-bottom: 40px;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.28571;
-  color: #fbfbfb;
+  line-height: 1.29;
+  color: var(--main-text);
 }
 
 @media screen and (min-width: 768px) {
   .vegetables-text {
     font-size: 16px;
-    line-height: 1.25;
   }
 }
 
@@ -576,7 +556,7 @@
 
 .vegetables-item {
   padding: 32px 26px;
-  background-color: #fbfbfb;
+  background-color: var(--background-color-third);
   border-radius: 40px;
 }
 
@@ -600,13 +580,13 @@
   font-size: 32px;
   line-height: 1;
   letter-spacing: -0.01em;
-  color: #7a3145;
+  color: var(--accent-color-first);
 }
 
 .vegetables-item-text {
   font-weight: 600;
   font-size: 14px;
-  line-height: 1.28571;
+  line-height: 1.29;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   color: #141414;
@@ -615,17 +595,17 @@
 
 /* reviews */
 .reviews {
-  background: #fbfbfb;
+  background-color: var(--background-color-third);
 }
 
 .reviews-title {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 48px;
-  line-height: 1.04167;
+  line-height: 1.04;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #141414;
+  color: var(--black-text);
 }
 
 @media screen and (min-width: 768px) {
@@ -644,8 +624,8 @@
   margin-bottom: 40px;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.28571;
-  color: #141414;
+  line-height: 1.29;
+  color: var(--black-text);
 }
 
 @media screen and (min-width: 768px) {
@@ -673,8 +653,6 @@
 .reviews-item-title {
   font-weight: 600;
   font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
   text-align: center;
   color: #040306;
 }
@@ -690,7 +668,7 @@
 .reviews-item-text {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.28571;
+  line-height: 1.29;
   text-align: center;
   color: rgba(4, 3, 6, 0.4);
   margin-bottom: 40px;
@@ -703,8 +681,6 @@
     margin-bottom: 50px;
   }
 }
-
-/* order */
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .order-main-container {
@@ -738,10 +714,10 @@
   margin-bottom: 29px;
   font-weight: 600;
   font-size: 48px;
-  line-height: 1.04167;
+  line-height: 1.04;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #fbfbfb;
+  color: var(--main-text);
 }
 
 @media screen and (min-width: 768px) {
@@ -753,20 +729,20 @@
 }
 
 .order-title span {
-  color: rgba(251, 251, 251, 0.3);
+  color: var(--accent-alfa-color);
 }
 
 .order-text {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.28571;
-  color: #fbfbfb;
+  line-height: 1.29;
+  color: var(--main-text);
 }
 
 @media screen and (min-width: 768px) {
   .order-text {
     font-size: 16px;
-    line-height: 1.25;
+
     max-width: 612px;
   }
 }
@@ -794,7 +770,7 @@
   padding: 40px 20px;
   margin-bottom: 20px;
   border-radius: 30px;
-  background-color: #fbfbfb;
+  background-color: var(--background-color-third);
 }
 
 @media screen and (min-width: 768px) {
@@ -816,15 +792,15 @@
 .order-form-title {
   font-weight: 600;
   font-size: 24px;
-  line-height: 1.08333;
+  line-height: 1.08;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #141414;
+  color: var(--black-text);
   margin-bottom: 50px;
 }
 
 .order-form-title .violet {
-  color: #7a3145;
+  color: var(--accent-color-first);
 }
 
 .order-form-title .green {
@@ -846,22 +822,19 @@
   padding: 16px;
   width: 100%;
   display: block;
-  transition: outline 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: outline var(--time) var(--cubic);
 }
 
 .order-form-input::placeholder,
 .order-form-comments::placeholder {
   font-weight: 500;
   font-size: 16px;
-  color: #141414;
+  color: var(--black-text);
 }
 
 .order-form-input:focus-within,
 .order-form-input:focus,
-.order-form-input:hover {
-  outline: 1px solid #3cbc81;
-}
-
+.order-form-input:hover,
 .order-form-comments:focus-within,
 .order-form-comments:focus,
 .order-form-comments:hover {
@@ -876,29 +849,29 @@
 .order-form-btn {
   font-weight: 600;
   font-size: 18px;
-  line-height: 1.11111;
+  line-height: 1.11;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #fbfbfb;
+  color: var(--main-text);
 
   border-radius: 30px;
   padding: 16px;
   width: 100%;
   height: 52px;
-  background-color: #576f35;
+  background-color: var(--background-color-second);
   cursor: pointer;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background-color var(--time) var(--cubic);
 }
 
 .order-form-btn:hover,
 .order-form-btn:focus {
-  background-color: #7a3145;
+  background-color: var(--background-color-first);
 }
 
 .social-container {
   padding: 40px 20px;
-  background-color: #576f35;
+  background-color: var(--background-color-second);
   border-radius: 30px;
 }
 
@@ -933,9 +906,9 @@
   margin-bottom: 14px;
   font-weight: 600;
   font-size: 18px;
-  line-height: 1.11111;
+  line-height: 1.11;
   letter-spacing: -0.01em;
-  color: rgba(251, 251, 251, 0.5);
+  color: var(--accent-alfa-input-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -954,10 +927,10 @@
   margin-right: 8px;
   font-weight: 600;
   font-size: 24px;
-  line-height: 1.08333;
+  line-height: 1.08;
   letter-spacing: -0.01em;
-  color: #fbfbfb;
-  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: var(--main-text);
+  transition: color var(--time) var(--cubic);
 }
 
 @media screen and (min-width: 768px) {
@@ -969,13 +942,13 @@
 
 .social-link:hover,
 .social-link:focus {
-  color: #7a3145;
+  color: var(--accent-color-first);
 }
 
 .social-slesh {
   font-weight: 600;
   font-size: 24px;
-  line-height: 1.08333;
+  line-height: 1.08;
   letter-spacing: -0.01em;
 }
 
@@ -1047,7 +1020,7 @@
 }
 
 .footer-svg {
-  transition: fill 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: fill var(--time) var(--cubic);
 }
 
 .footer-svg:hover,
@@ -1058,14 +1031,13 @@
 .footer-text {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.28571;
-  color: #fbfbfb;
+  line-height: 1.29;
+  color: var(--main-text);
 }
 
 @media screen and (min-width: 768px) {
   .footer-text {
     font-size: 16px;
-    line-height: 1.25;
   }
 }
 
@@ -1095,8 +1067,8 @@
   line-height: 1;
   letter-spacing: -0.01em;
   text-transform: lowercase;
-  color: #fbfbfb;
-  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: var(--main-text);
+  transition: color var(--time) var(--cubic);
 }
 
 @media screen and (min-width: 768px) {
@@ -1128,8 +1100,8 @@
   line-height: 1.29;
   letter-spacing: -0.01em;
   font-style: normal;
-  color: #fbfbfb;
-  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: var(--main-text);
+  transition: color var(--time) var(--cubic);
 }
 
 @media screen and (min-width: 768px) {
@@ -1179,11 +1151,11 @@
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: -0.01em;
-  color: rgba(251, 251, 251, 0.5);
+  color: var(--accent-alfa-input-color);
 }
 
 .policy-link {
-  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: color var(--time) var(--cubic);
 }
 
 @media screen and (min-width: 768px) {
@@ -1208,7 +1180,7 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: -0.01em;
-  color: rgba(251, 251, 251, 0.5);
+  color: var(--accent-alfa-input-color);
 }
 
 @media screen and (min-width: 768px) {
