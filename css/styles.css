@@ -605,6 +605,17 @@
   backface-visibility: hidden;
   border-radius: 40px;
   transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.product-card-title {
+  margin-bottom: 10px;
+}
+.products-card-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.products-card-list {
+  margin-bottom: 20px;
 }
 
 .vegetables-item-title {
