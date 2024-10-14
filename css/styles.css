@@ -2,7 +2,9 @@
   padding-top: 20px;
   background-color: var(--background-color-second);
 }
-
+main {
+  overflow-x: hidden;
+}
 @media screen and (min-width: 1280px) {
   .header {
     position: absolute;

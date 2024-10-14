@@ -1,18 +1,43 @@
 (() => {
-  const c = document.querySelector(".js-menu-container"),
-    o = document.querySelector(".js-open-menu"),
-    s = document.querySelector(".js-close-menu"),
-    r = document.querySelectorAll(".menu-nav-link"),
-    e = () => {
-      const t = o.getAttribute("aria-expanded") === "true" || !1;
-      o.setAttribute("aria-expanded", !t), c.classList.toggle("is-open");
-      const n = t ? "enableBodyScroll" : "disableBodyScroll";
-    };
-  r.forEach((t) => t.addEventListener("click", e)),
-    o.addEventListener("click", e),
-    s.addEventListener("click", e),
-    window.matchMedia("(min-width: 768px)").addEventListener("change", (t) => {
-      t.matches &&
-        (c.classList.remove("is-open"), o.setAttribute("aria-expanded", !1));
+  const mobileMenu = document.querySelector(".js-menu-container");
+  const openMenuBtn = document.querySelector(".js-open-menu");
+  const closeMenuBtn = document.querySelector(".js-close-menu");
+
+  const toggleMenu = () => {
+    const anchors = mobileMenu.querySelectorAll('a[href*="#"]');
+
+    const isMenuOpen =
+      openMenuBtn.getAttribute("aria-expanded") === "true" || false;
+    openMenuBtn.setAttribute("aria-expanded", !isMenuOpen);
+    mobileMenu.classList.toggle("is-open");
+
+    const scrollLockMethod = !isMenuOpen
+      ? "disableBodyScroll"
+      : "enableBodyScroll";
+    bodyScrollLock[scrollLockMethod](document.body);
+
+    if (anchors.length === 0) return;
+
+    if (!isMenuOpen) {
+      anchors.forEach((anchor) => {
+        anchor.addEventListener("click", toggleMenu);
+      });
+      return;
+    }
+
+    anchors.forEach((anchor) => {
+      anchor.removeEventListener("click", toggleMenu);
     });
+  };
+
+  openMenuBtn.addEventListener("click", toggleMenu);
+  closeMenuBtn.addEventListener("click", toggleMenu);
+
+  // Вказати брейкпоінт після якого повинна зачинятися
+  window.matchMedia("(min-width: 1279px)").addEventListener("change", (e) => {
+    if (!e.matches) return;
+    mobileMenu.classList.remove("is-open");
+    openMenuBtn.setAttribute("aria-expanded", false);
+    bodyScrollLock.enableBodyScroll(document.body);
+  });
 })();

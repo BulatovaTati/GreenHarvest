@@ -54,8 +54,6 @@
           class="menu-open-btn js-open-menu"
           aria-expanded="false"
           aria-label="Menu open button"
-          aria-controls="menu-container"
-          data-menu-button
         >
           <svg
             class="menu-icons"
@@ -69,12 +67,11 @@
             ></use>
           </svg>
         </button>
-        <div class="menu-backdrop js-menu-container">
-          <div class="menu" id="menu-container">
+        <div class="menu-backdrop js-menu-container" id="mobile-menu">
+          <div class="menu menu-wrapper">
             <button
               type="button"
               class="menu-close-btn js-close-menu"
-              id="menu-close-btn"
               aria-expanded="false"
               aria-label="Menu close button"
             >
@@ -707,8 +704,14 @@
       </div>
     </footer>
     <button class="scroll-to-top js-transparent">UP</button>
-    <script src="./js/flip-card.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/flip-card.js"></script>
     <script src="./js/to-top.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>

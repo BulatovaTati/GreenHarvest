@@ -76,30 +76,24 @@ body {
 }
 
 .scroll-to-top {
-  display: none;
-}
+  display: block;
+  position: fixed;
+  bottom: 210px;
+  right: 8%;
 
-@media screen and (min-width: 768px) {
-  .scroll-to-top {
-    display: block;
-    position: fixed;
-    bottom: 210px;
-    right: 8%;
+  width: 45px;
+  height: 45px;
+  color: var(--main-text);
+  background-color: var(--background-color-first);
+  outline: 2px solid var(--accent-color-second);
+  border-radius: 150px 150px 0px;
+  border: none;
 
-    width: 45px;
-    height: 45px;
-    color: var(--main-text);
-    background-color: var(--background-color-first);
-    outline: 2px solid var(--accent-color-second);
-    border-radius: 150px 150px 0px;
-    border: none;
+  cursor: pointer;
 
-    cursor: pointer;
-
-    transition: opacity var(--time) var(--cubic), color var(--time) var(--cubic),
-      outline var(--time) var(--cubic);
-    animation: slide-top 1s linear 2s infinite alternate both;
-  }
+  transition: opacity var(--time) var(--cubic), color var(--time) var(--cubic),
+    outline var(--time) var(--cubic);
+  animation: slide-top 1s linear 2s infinite alternate both;
 }
 
 .scroll-to-top:hover,
